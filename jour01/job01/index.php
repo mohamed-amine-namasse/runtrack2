@@ -35,6 +35,7 @@
     $myBool=false;
     echo "\$myBool:";
     echo $myBool;
+    echo "<br>";
     ?>
 
 
