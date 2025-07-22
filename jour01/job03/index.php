@@ -38,25 +38,25 @@
     </tr>
     <tr>
     <td>boolean</td>
-    <td>\$var_bool</td>
+    <td>var_bool</td>
     <td>$tableau[0]</td>
     </tr>
     <tr>
     <td>entier</td>
-    <td>\$a</td>
+    <td>a</td>
     <td>$tableau[1]</td>
     
     </tr>
     <tr>
     <td>chaine de caractère</td>
-    <td>\$str</td>
+    <td>str</td>
     <td>$tableau[2]</td>
 
     </tr>
     
     <tr>
     <td>nombre à virgule flottante</td>
-    <td>\$nbr</td>
+    <td>nbr</td>
     <td>$tableau[3]</td>
     </tr>
     </table>
