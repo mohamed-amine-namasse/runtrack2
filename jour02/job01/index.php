@@ -9,10 +9,10 @@
 
 <body>
     <?php
-        echo "<p>Hello LaPlateforme!</p>";// Ceci est un commentaire sur une seule ligne
-        echo "<p>Hello LaPlateforme!</p>";/* Ceci est un commentaire sur
-        plusieurs lignes */
-        ?>
+    for( $i = 1; $i < 1337; $i++ )
+    echo $i . '<br />';
+    
+    ?>
 </body>
 
 </html>
