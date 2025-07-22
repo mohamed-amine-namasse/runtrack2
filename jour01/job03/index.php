@@ -25,11 +25,7 @@
     echo "\$nbr:";
     echo $nbr;
     echo "<br>";
-    /*
-    $tableau=array(
-        true,25,"une phrase",3.14
-    );
-     */
+    
     $tableau=array(
         $var_bool,$a,$str,$nbr
     );
