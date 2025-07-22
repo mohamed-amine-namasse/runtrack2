@@ -16,11 +16,11 @@
 
     for( $i = 1; $i <=$hauteur; $i++ ){
         for( $j = 1; $j <=$largeur;$j++){
-            //mettre une étoile si la ligne=1 ou 10
+            //mettre une étoile si l'indice de ligne est égal à la première ligne ou la dernière
             if($i==1 || $i==$hauteur){
                 echo "*";
             }
-            //mettre une étoile si la cplonne=1 ou 20
+            //mettre une étoile si l'indice de colonne est égal à la première colonne ou la dernière
             elseif($j==1 || $j==$largeur){
                 echo "*";
             }
