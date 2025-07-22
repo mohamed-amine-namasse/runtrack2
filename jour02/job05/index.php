@@ -10,7 +10,7 @@
 <body>
     <?php
     // Fonction pour vérifier si un nombre est premier
-    function isPrime($number) {
+    function isPrime($number){
     //boucle de 2 au nombre à tester
         for ($i = 2; $i < $number; $i++) {
             //test du quotien de la division
