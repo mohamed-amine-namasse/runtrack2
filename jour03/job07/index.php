@@ -17,6 +17,7 @@
         
         $str[$i] = $str[$i+1];
     }
+    //on rajoute la première lettre à la fin
     $new_str=substr_replace($str,$p_lettre,$longueur-1,0);
     echo $new_str;
     
