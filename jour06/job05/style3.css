@@ -1,0 +1,22 @@
+h1{
+color:violet;
+}
+
+body{
+  margin-left: 50px;
+}
+form {
+
+  border-radius: 15px;
+  width: 740px;
+  height: fit-content;
+  padding: 1em;
+  background: cyan;}
+
+
+  label{
+  font-family: 'Franklin Gothic Medium';
+  font-style: bold;
+  color: green;
+  font-size: 25px;
+}
