@@ -19,7 +19,13 @@
 
 
     <?php
+
+      
+        
     
+
+    
+    if (isset($_GET["largeur"])&& isset($_GET["hauteur"])) {
     // Définir les dimensions du rectangle de la maison
     $largeur=$_GET["largeur"]*2;
     $hauteur = $_GET["hauteur"];
@@ -61,7 +67,7 @@
         }
         echo "<br/>";
     }
-    
+    }
     
     ?>
 </body>

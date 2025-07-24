@@ -21,7 +21,7 @@
 
     <?php
     
-    
+    if (isset($_GET["prenom"])&& isset($_GET["nom"])) {
     $tableau=array($_GET["prenom"],$_GET["nom"]);
     echo "
     <table>
@@ -41,7 +41,7 @@
  ";
     
     
-    
+    }
     ?>
 </body>
 

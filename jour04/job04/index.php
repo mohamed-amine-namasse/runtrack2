@@ -21,7 +21,7 @@
 
     <?php
     
-    
+    if (isset($_POST["prenom"])&&isset($_POST["nom"])) {
     $tableau=array($_POST["prenom"],$_POST["nom"]);
     echo "
     <table>
@@ -40,7 +40,7 @@
     </table>
  ";
     
-    
+    }
     
     ?>
 </body>

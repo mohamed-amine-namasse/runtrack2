@@ -1,0 +1,23 @@
+h1{
+color:rgb(117, 0, 128);
+}
+
+body{
+  margin-left: 50px;
+}
+form {
+
+  border-radius: 15px;
+  width: 740px;
+  height: fit-content;
+  padding: 1em;
+  background: red;}
+
+
+  label{
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
+  
+}

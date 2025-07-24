@@ -20,6 +20,7 @@
 
 
     <?php
+
     $nombre_POST = count($_POST);
     echo "le nombre de d'argument POST envoyé est:" .$nombre_POST;
     ?>
