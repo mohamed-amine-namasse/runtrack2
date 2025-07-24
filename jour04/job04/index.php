@@ -9,7 +9,7 @@
 
 <body>
 
-    <form action="index.php" method="get">
+    <form action="index.php" method="post">
         <label>prénom:</label><br>
         <input type="text" name="prenom"><br>
         <label>nom:</label><br>
@@ -22,7 +22,7 @@
     <?php
     
     
-    $tableau=array($_POST["prenom"],$_GET["nom"]);
+    $tableau=array($_POST["prenom"],$_POST["nom"]);
     echo "
     <table>
     <tr>
