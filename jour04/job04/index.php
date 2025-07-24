@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
     <form action="index.php" method="get">
         <label>prénom:</label><br>
         <input type="text" name="prenom"><br>
@@ -16,9 +17,31 @@
         <input type="submit" value="Envoyer">
 
     </form>
+
+
     <?php
-    $nombre_GET = count($_GET);
-    echo "le nombre de d'argument GET envoyé est:" .$nombre_GET;
+    
+    
+    $tableau=array($_POST["prenom"],$_GET["nom"]);
+    echo "
+    <table>
+    <tr>
+    <th>Argument</th>
+    <th>Valeur</th>
+    </tr>
+    <tr>
+    <td>prenom</td>
+    <td>$tableau[0]</td>
+    </tr>
+    <tr>
+    <td>nom</td>
+    <td>$tableau[1]</td>
+    </tr>
+    </table>
+ ";
+    
+    
+    
     ?>
 </body>
 
