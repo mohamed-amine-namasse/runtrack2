@@ -27,14 +27,15 @@
     
     if (isset($_GET["largeur"])&& isset($_GET["hauteur"])) {
     // Définir les dimensions du rectangle de la maison
-    $largeur=$_GET["largeur"]*2;
-    $hauteur = $_GET["hauteur"];
+    $largeur=$_GET["largeur"]+1;
+    $hauteur = $_GET["hauteur"]+2;
 
 
 
 
     // Définir les dimensions du triangle
-    $hauteur_triangle = $_GET["largeur"];
+    $hauteur_triangle = $_GET["hauteur"];
+    $base_triangle = $largeur;
     
     // Boucle pour chaque ligne du triangle
     for ($i = 1; $i <= $hauteur_triangle; $i++) {
@@ -52,13 +53,13 @@
     
     for( $i = 1; $i <=$hauteur; $i++ ){
         for( $j = 1; $j <=$largeur;$j++){
-            //mettre une étoile si l'indice de ligne est égal à la première ligne ou la dernière
-            if($i==1 || $i==$hauteur){
-                echo "*";
+            //mettre une étoile si l'indice de ligne est égal à la première ou dernière ligne
+            if( $i==1||$i==$hauteur ){
+                echo "_";
             }
             //mettre une étoile si l'indice de colonne est égal à la première colonne ou la dernière
             elseif($j==1 || $j==$largeur){
-                echo "*";
+                echo "|";
             }
             //mettre des espaces au milieu
             else{
