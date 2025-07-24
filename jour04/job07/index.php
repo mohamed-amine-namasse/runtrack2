@@ -20,9 +20,29 @@
 
     <?php
     
-    // Définir les dimensions de la maison
-    $largeur=$_GET["largeur"];
+    // Définir les dimensions du rectangle de la maison
+    $largeur=$_GET["largeur"]*2;
     $hauteur = $_GET["hauteur"];
+
+
+
+
+    // Définir les dimensions du triangle
+    $hauteur_triangle = $_GET["largeur"];
+    
+    // Boucle pour chaque ligne du triangle
+    for ($i = 1; $i <= $hauteur_triangle; $i++) {
+        // Afficher les espaces pour centrer le triangle 
+        for ($j = 1; $j <= $hauteur_triangle - $i; $j++) {
+            echo "&nbsp;&nbsp";
+        }
+        // Afficher les étoiles
+        for ($k = 1; $k <= 2 * $i - 1; $k++) {
+            echo "*";
+        }
+        // Aller à la ligne suivante
+        echo "<br/>";
+    }
     
     for( $i = 1; $i <=$hauteur; $i++ ){
         for( $j = 1; $j <=$largeur;$j++){
