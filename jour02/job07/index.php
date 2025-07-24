@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    // Définir les dimensions du rectangle
+    // Définir les dimensions du triangle
     $hauteur = 5;
     
     // Boucle pour chaque ligne du triangle
