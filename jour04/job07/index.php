@@ -50,7 +50,7 @@
         // Aller à la ligne suivante
         echo "<br/>";
     }
-    
+    //boucle pour le rectangle 
     for( $i = 1; $i <=$hauteur; $i++ ){
         for( $j = 1; $j <=$largeur;$j++){
             //mettre une étoile si l'indice de ligne est égal à la première ou dernière ligne
