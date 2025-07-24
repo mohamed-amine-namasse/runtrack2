@@ -27,7 +27,7 @@
     
     if (isset($_GET["largeur"])&& isset($_GET["hauteur"])) {
     // Définir les dimensions du rectangle de la maison
-    $largeur=$_GET["largeur"]+1;
+    $largeur=$_GET["largeur"];
     $hauteur = $_GET["hauteur"]+2;
 
 
@@ -35,7 +35,7 @@
 
     // Définir les dimensions du triangle
     $hauteur_triangle = $_GET["hauteur"];
-    $base_triangle = $largeur;
+    
     
     // Boucle pour chaque ligne du triangle
     for ($i = 1; $i <= $hauteur_triangle; $i++) {
