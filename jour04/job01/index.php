@@ -17,8 +17,8 @@
 
     </form>
     <?php
-    $nombreArguments = count($_GET);
-    echo "le nombre de d'argument GET envoyé est:" .$nombreArguments;
+    $nombre_GET = count($_GET);
+    echo "le nombre de d'argument GET envoyé est:" .$nombre_GET;
     ?>
 </body>
 
