@@ -37,7 +37,6 @@
     <td>nom</td>
     <td>$tableau[1]</td>
     </tr>
-    
     </table>
  ";
     
