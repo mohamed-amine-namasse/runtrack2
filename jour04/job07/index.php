@@ -41,11 +41,26 @@
     for ($i = 1; $i <= $hauteur_triangle; $i++) {
         // Afficher les espaces pour centrer le triangle 
         for ($j = 1; $j <= $hauteur_triangle - $i; $j++) {
-            echo "&nbsp;&nbsp";
+            echo "&nbsp;&nbsp;";
         }
-        // Afficher les étoiles
+         // Affichage du toit
         for ($k = 1; $k <= 2 * $i - 1; $k++) {
-            echo "*";
+            
+            if ($i == 1) {
+                // Sommet du triangle :
+                echo "/\\";
+            }
+            elseif ($k == 1) {//pour les bords de droite du toit
+                echo "/";
+            } 
+            elseif ($k == 2 * $i - 1) {//pour les bords de gauche du toit
+                echo "&nbsp;\\";
+            
+            }
+            elseif ($i == $hauteur_triangle) {echo "&nbsp;&nbsp";}
+            else {   // on met des espaces entre les 2 bords
+                echo "_";
+            }
         }
         // Aller à la ligne suivante
         echo "<br/>";
