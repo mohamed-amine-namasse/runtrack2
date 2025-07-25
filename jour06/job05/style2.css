@@ -4,6 +4,7 @@ color:brown;
 
 body{
   margin-left: 50px;
+  background-color: greenyellow;
 }
 form {
 
@@ -19,4 +20,9 @@ form {
   font-style: italic;
   color: orange;
   font-size: 25px;
+}
+
+ input:hover{
+background-color: red;
+border: solid 5px;
 }
