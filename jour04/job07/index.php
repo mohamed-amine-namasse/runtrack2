@@ -66,21 +66,22 @@
             
             }
             elseif ($i == $hauteur_triangle) {echo "&nbsp;&nbsp";}
-            else {   // on met des espaces entre les 2 bords
+            else {   // on met des traits entre les 2 bords
                 echo "_";
             }
         }
         // Aller à la ligne suivante
         echo "<br/>";
     }
+
     //boucle pour le rectangle 
     for( $i = 1; $i <=$hauteur; $i++ ){
         for( $j = 1; $j <=$largeur_triangle;$j++){
-            //mettre une étoile si l'indice de ligne est égal à la première ou dernière ligne
+            //mettre un trait horizontal si l'indice de ligne est égal à la première ou dernière ligne
             if( $i==1||$i==$hauteur ){
                 echo "_";
             }
-            //mettre une étoile si l'indice de colonne est égal à la première colonne ou la dernière
+            //mettre un trait vertical si l'indice de colonne est égal à la première colonne ou la dernière
             elseif($j==1 || $j==$largeur_triangle){
                 echo "|";
             }
