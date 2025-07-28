@@ -56,7 +56,7 @@
             } elseif ($i == $hauteur_triangle - 1) {
                 echo "_"; // base
             } else {
-                echo "&nbsp;&nbsp;"; // intérieur
+                echo "_"; // intérieur
             }
         }
         echo "<br/>";
