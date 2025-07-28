@@ -11,9 +11,9 @@
     <?php
     function getHello()
     {
-        echo "Hello LaPlateforme!";
+        return "Hello LaPlateforme!";
     }
-    getHello();
+    echo getHello();
     
     ?>
 </body>
