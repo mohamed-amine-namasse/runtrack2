@@ -1,7 +1,12 @@
 <?php
     //On démarre une session
     session_start();
-   
+    
+    //Réinitialisation de la liste si le bouton reset est cliqué
+    if (isset($_POST['reset'])) {
+    $_SESSION['prenom'] = 0;}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,39 +18,14 @@
 </head>
 
 <body>
-
+    <p>Liste des prénoms : <?php echo $_SESSION['nbvisites']; ?></p>
     <form action="index.php" method="post">
-        <label>prénom:</label><br>
-        <input type="text" name="prenom"><br>
+        <label>prénom:</label>
+        <input type="text" name="prenom">
         <input type="submit" value="Envoyer">
-
     </form>
 
 
-    <?php
-    
-    if (isset($_POST["prenom"])) {
-    $tableau=array($_POST["prenom"],$_POST["nom"]);
-    echo "
-    <table>
-    <tr>
-    <th>Argument</th>
-    <th>Valeur</th>
-    </tr>
-    <tr>
-    <td>prenom</td>
-    <td>$tableau[0]</td>
-    </tr>
-    <tr>
-    <td>nom</td>
-    <td>$tableau[1]</td>
-    </tr>
-    </table>
- ";
-    
-    }
-    
-    ?>
 </body>
 
 

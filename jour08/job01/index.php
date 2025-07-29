@@ -25,7 +25,7 @@ if (isset($_SESSION['nbvisites'])) {
 
 <body>
     <p>Nombre de visites : <?php echo $_SESSION['nbvisites']; ?></p>
-    <form method="post">
+    <form action="index.php" method="post">
         <button type="submit" name="reset">reset</button>
     </form>
 </body>

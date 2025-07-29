@@ -25,7 +25,7 @@ if (isset($_POST['reset'])) {
 
 <body>
     <p>Nombre de visites : <?php echo $nbvisites; ?></p>
-    <form method="post">
+    <form action="index.php" method="post">
         <button type="submit" name="reset">reset</button>
     </form>
 </body>
