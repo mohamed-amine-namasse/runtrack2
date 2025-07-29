@@ -36,8 +36,7 @@
         $largeur_triangle++; // arrondi à l'impair supérieur
     }
 
-    // Calcul de la hauteur à partir de la largeur
-   // $hauteur_triangle = intval(($largeur_triangle + 1) / 2);
+    
 
     
     // Boucle pour chaque ligne du triangle (base = largeur saisie)
