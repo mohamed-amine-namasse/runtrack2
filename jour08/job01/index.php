@@ -8,11 +8,11 @@ if (isset($_POST['reset'])) {
 }
 
 // Incrémentation du compteur
-if (!isset($_SESSION['nbvisites'])) {
-    $_SESSION['nbvisites'] = 1;
-} else {
-    $_SESSION['nbvisites']++;
-}
+if (isset($_SESSION['nbvisites'])) {
+        $nbvisites = $_SESSION['nbvisites'] + 1;
+    } else {
+        $nbvisites = 1;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
