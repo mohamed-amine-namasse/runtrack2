@@ -12,7 +12,7 @@ if (isset($_POST['prenom']) && !empty(trim($_POST['prenom']))) {
     if (!isset($_SESSION['prenoms'])) {
         $_SESSION['prenoms'] = [];
     }
-   $_SESSION['prenoms'][] = htmlspecialchars(trim($_POST['prenom']));
+   $_SESSION['prenoms'][] = trim($_POST['prenom']);
 }
 ?>
 <!DOCTYPE html>
@@ -32,13 +32,16 @@ if (isset($_POST['prenom']) && !empty(trim($_POST['prenom']))) {
         <button type="submit" name="submit">Envoyer</button>
         <button type="submit" name="reset">reset</button>
     </form>
-    <p>Liste des prénoms :
+    <p>Liste des prénoms : <br>
         <?php
-        if (!empty($_SESSION['prenoms'])) {
-            echo implode(', ', $_SESSION['prenoms']);
-        } else {
-            echo 'Aucun prénom enregistré.';
+        
+    if (!empty($_SESSION['prenoms'])) {
+        foreach ($_SESSION['prenoms'] as $prenom) {
+            echo $prenom ."<br/>" ;
         }
+    } else {
+        echo 'Aucun prénom enregistré.';
+    }
         ?>
     </p>
 </body>
