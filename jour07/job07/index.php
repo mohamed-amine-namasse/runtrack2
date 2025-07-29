@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form method="post" action="">
+    <form method="post" action="index.php">
         <label for="str">Texte :</label>
         <input type="text" id="str" name="str" required />
 
