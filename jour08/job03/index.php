@@ -4,14 +4,16 @@ session_start();
 
 // Réinitialisation de la liste si le bouton reset est cliqué
 if (isset($_POST['reset'])) {
-    $_SESSION['prenoms'] = 0;
+    $_SESSION['prenoms'] = [];
 }
 
-if (isset($_POST['prenom'])) {
-    $prenom=$_SESSION['prenoms'] ;
-    echo $prenom;
+// Ajout du prénom si le formulaire est soumis
+if (isset($_POST['prenom']) && !empty(trim($_POST['prenom']))) {
+    if (!isset($_SESSION['prenoms'])) {
+        $_SESSION['prenoms'] = [];
+    }
+    $_SESSION['prenoms'][] = htmlspecialchars(trim($_POST['prenom']));
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,12 +29,17 @@ if (isset($_POST['prenom'])) {
     <form action="index.php" method="post">
         <label>prénom:</label>
         <input type="text" name="prenom">
-        <input type="submit" value="Envoyer">
+        <button type="submit" name="submit">Envoyer</button>
         <button type="submit" name="reset">reset</button>
     </form>
-
     <p>Liste des prénoms :
-
+        <?php
+        if (!empty($_SESSION['prenoms'])) {
+            echo implode(', ', $_SESSION['prenoms']);
+        } else {
+            echo 'Aucun prénom enregistré.';
+        }
+        ?>
     </p>
 </body>
 
