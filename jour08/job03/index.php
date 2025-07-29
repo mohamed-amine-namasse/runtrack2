@@ -1,0 +1,52 @@
+<?php
+    //On démarre une session
+    session_start();
+   
+?>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="index.php" method="post">
+        <label>prénom:</label><br>
+        <input type="text" name="prenom"><br>
+        <input type="submit" value="Envoyer">
+
+    </form>
+
+
+    <?php
+    
+    if (isset($_POST["prenom"])) {
+    $tableau=array($_POST["prenom"],$_POST["nom"]);
+    echo "
+    <table>
+    <tr>
+    <th>Argument</th>
+    <th>Valeur</th>
+    </tr>
+    <tr>
+    <td>prenom</td>
+    <td>$tableau[0]</td>
+    </tr>
+    <tr>
+    <td>nom</td>
+    <td>$tableau[1]</td>
+    </tr>
+    </table>
+ ";
+    
+    }
+    
+    ?>
+</body>
+
+
+</html>

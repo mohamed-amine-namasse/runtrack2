@@ -1,5 +1,5 @@
 <?php
-// Start the session
+// On démarre une session
 session_start();
 
 // Réinitialisation si le bouton reset est cliqué
