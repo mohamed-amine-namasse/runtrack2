@@ -1,11 +1,16 @@
 <?php
-    //On démarre une session
-    session_start();
-    
-    //Réinitialisation de la liste si le bouton reset est cliqué
-    if (isset($_POST['reset'])) {
-    $_SESSION['prenom'] = 0;}
+// On démarre une session
+session_start();
 
+// Réinitialisation de la liste si le bouton reset est cliqué
+if (isset($_POST['reset'])) {
+    $_SESSION['prenoms'] = 0;
+}
+
+if (isset($_POST['prenom'])) {
+    $prenom=$_SESSION['prenoms'] ;
+    echo $prenom;
+}
 
 ?>
 <!DOCTYPE html>
@@ -18,15 +23,17 @@
 </head>
 
 <body>
-    <p>Liste des prénoms : <?php echo $_SESSION['nbvisites']; ?></p>
+
     <form action="index.php" method="post">
         <label>prénom:</label>
         <input type="text" name="prenom">
         <input type="submit" value="Envoyer">
+        <button type="submit" name="reset">reset</button>
     </form>
 
+    <p>Liste des prénoms :
 
+    </p>
 </body>
-
 
 </html>

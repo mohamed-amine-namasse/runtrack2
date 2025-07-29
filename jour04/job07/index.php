@@ -37,26 +37,29 @@
     }
 
     // Calcul de la hauteur à partir de la largeur
-    $hauteur_triangle = intval(($largeur_triangle + 1) / 2);
+   // $hauteur_triangle = intval(($largeur_triangle + 1) / 2);
 
-    // Boucle pour chaque ligne du triangle (défini par la largeur)
+    
+    // Boucle pour chaque ligne du triangle (base = largeur saisie)
     for ($i = 0; $i < $hauteur_triangle; $i++) {
-        // Nombre d'espaces à gauche pour centrer
-        $espaces = $hauteur_triangle - $i - 1;
-        echo str_repeat("&nbsp;&nbsp;", $espaces);
+        // Largeur de la ligne courante (1 au sommet, largeur totale à la base)
+        $largeur_ligne = intval(2+ ($largeur_triangle - 1) * $i / ($hauteur_triangle - 1));
+        // Position du bord gauche pour chaque ligne
+        $bord_gauche = intval(($largeur_triangle - $largeur_ligne) / 2);
+        // Position du bord droit (toujours aligné verticalement)
+        $bord_droit = $largeur_triangle - $bord_gauche - 1;
 
-        // Largeur de la ligne courante
-        $largeur_ligne = 2 * $i + 1;
-
-        for ($j = 0; $j < $largeur_ligne; $j++) {
-            if ($j == 0) {
-                echo "/"; // bord gauche
-            } elseif ($j == $largeur_ligne - 1) {
-                echo "\\"; // bord droit
-            } elseif ($i == $hauteur_triangle - 1) {
-                echo "_"; // base
-            } else {
-                echo "_"; // intérieur
+        for ($j = 0; $j < $largeur_triangle; $j++) {
+            if ($j == $bord_gauche) {
+                echo "/";
+            } elseif ($j == $bord_droit) {
+                echo "\\";
+            } 
+             elseif ($j>$bord_gauche && $j < $bord_droit){
+                echo "_";
+            }
+            else{
+                echo "&nbsp;&nbsp;";
             }
         }
         echo "<br/>";
@@ -69,9 +72,10 @@
 
 
 
+
     //boucle pour le rectangle 
     
-    for( $i = 1; $i <= $hauteur_triangle-1; $i++ ){
+    for( $i = 1; $i <= $hauteur_triangle; $i++ ){
    
 
     
@@ -80,7 +84,7 @@
         if($j==1 || $j==$largeur_triangle){
             echo "|";
         }
-        elseif($i == $hauteur_triangle-1){
+        elseif($i == $hauteur_triangle){
             //le trait de la base du rectangle
             echo "_";
         }
