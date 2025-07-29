@@ -12,7 +12,7 @@ if (isset($_POST['prenom']) && !empty(trim($_POST['prenom']))) {
     if (!isset($_SESSION['prenoms'])) {
         $_SESSION['prenoms'] = [];
     }
-    $_SESSION['prenoms'][] = htmlspecialchars(trim($_POST['prenom']));
+   $_SESSION['prenoms'][] = htmlspecialchars(trim($_POST['prenom']));
 }
 ?>
 <!DOCTYPE html>
