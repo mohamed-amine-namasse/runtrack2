@@ -1,2 +1,2 @@
-SELECT * FROM etudiants 
-WHERE prenom LIKE "T%";
+SELECT * FROM etudiants
+WHERE TIMESTAMPDIFF (YEAR,naissance,CURDATE())>18;
