@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 30, 2025 at 08:30 AM
+-- Generation Time: Jul 30, 2025 at 08:50 AM
 -- Server version: 8.0.42
 -- PHP Version: 8.3.16
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `etage`
+-- Table structure for table `etages`
 --
 
-CREATE TABLE `etage` (
+CREATE TABLE `etages` (
   `id` int NOT NULL,
   `nom` varchar(255) NOT NULL,
   `numero` int NOT NULL,
@@ -35,10 +35,10 @@ CREATE TABLE `etage` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `etage`
+-- Dumping data for table `etages`
 --
 
-INSERT INTO `etage` (`id`, `nom`, `numero`, `superficie`) VALUES
+INSERT INTO `etages` (`id`, `nom`, `numero`, `superficie`) VALUES
 (1, 'RDC', 0, 500),
 (2, 'R+1', 1, 500);
 
@@ -100,9 +100,9 @@ INSERT INTO `salles` (`id`, `nom`, `id_etage`, `capacite`) VALUES
 --
 
 --
--- Indexes for table `etage`
+-- Indexes for table `etages`
 --
-ALTER TABLE `etage`
+ALTER TABLE `etages`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -122,9 +122,9 @@ ALTER TABLE `salles`
 --
 
 --
--- AUTO_INCREMENT for table `etage`
+-- AUTO_INCREMENT for table `etages`
 --
-ALTER TABLE `etage`
+ALTER TABLE `etages`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
