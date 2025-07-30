@@ -37,7 +37,7 @@ if (isset($_POST['prenom']) && !empty(trim($_POST['prenom']))) {
         
     if (!empty($_SESSION['prenoms'])) {
         foreach ($_SESSION['prenoms'] as $prenom) {
-            echo "<li>".$prenom ."<br/>" ;
+            echo "<li>".$prenom ."</li>" ;
         }
     } else {
         echo 'Aucun prénom enregistré.';
