@@ -57,9 +57,9 @@ if (isset($_POST['cell'])) {
 // Si le jeu est terminé, afficher le message et réinitialiser la partie
 if ($_SESSION['gameOver']) {
     if ($_SESSION['winner'] === 'Match nul') {
-        echo "<script>alert('Match nul');</script>";
+        echo "Match ";
     } else {
-        echo "<script>alert('{$_SESSION['winner']} a gagné');</script>";
+        echo "{$_SESSION['winner']} a gagné'";
         // Réinitialiser la partie après l'alerte
         $_SESSION['board'] = array_fill(0, 9, null);
         $_SESSION['gameOver'] = false;
