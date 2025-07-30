@@ -1,0 +1,21 @@
+table{
+  border-collapse: collapse;
+  margin: auto;
+  height: 350px; 
+  width: 350px;
+ 
+}
+
+th, td{
+  border: 10px solid rgb(47, 144, 255);
+ 
+
+}
+
+
+
+h1{
+  text-align: center;
+}
+
+
