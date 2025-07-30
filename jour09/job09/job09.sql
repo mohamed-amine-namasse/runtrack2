@@ -1,2 +1,2 @@
-SELECT * FROM etudiants 
-WHERE 
+SELECT * FROM etudiants
+WHERE TIMESTAMPDIFF (YEAR,naissance,CURDATE())<18;
