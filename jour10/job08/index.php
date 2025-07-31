@@ -16,8 +16,9 @@
         echo "tu es connecté!";
     }
     else{echo "Echec de connexion";}
-    //on fait une requete SQL pour recupérer la superficie totale des étages 
-    $command= "SELECT SUM(superficie) AS superficie_totale FROM etages";
+    //on fait une requete SQL pour recupérer la somme des capacités des salles
+
+    $command= "SELECT SUM(capacite) AS capacite_totale FROM salles";
     $result = mysqli_query($connexion, $command);
     
 
