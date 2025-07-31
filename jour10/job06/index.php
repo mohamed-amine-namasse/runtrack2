@@ -27,13 +27,13 @@
     <table>
 
         <tr>
-            <?php        //on recupère le header de notre table etudiant
+            <?php        //on recupère le header de notre table
             $fields = mysqli_fetch_fields($result);
             foreach ($fields as $field) {
             echo"<th>".htmlspecialchars($field->name)."</th>";}
             ?>
         </tr>
-        <?php    //on recupère le body de notre table etudiant
+        <?php    //on recupère le body de notre table 
             while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             foreach ($fields as $field) {

@@ -16,8 +16,8 @@
         echo "tu es connecté!";
     }
     else{echo "Echec de connexion";}
-    //on fait une requete SQL pour recupérer le nom et la capacité de la table salles
-    $command= "SELECT nom ,capacite FROM salles";
+    //on fait une requete SQL pour recupérer la superficie totale des étages 
+    $command= "SELECT SUM(superficie) AS superficie_totale FROM etages";
     $result = mysqli_query($connexion, $command);
     
 
@@ -33,7 +33,7 @@
             echo"<th>".htmlspecialchars($field->name)."</th>";}
             ?>
         </tr>
-        <?php    //on recupère le body de notre table 
+        <?php    //on recupère le body de notre table
             while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             foreach ($fields as $field) {
