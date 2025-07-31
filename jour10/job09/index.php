@@ -16,7 +16,7 @@
         echo "tu es connecté!";
     }
     else{echo "Echec de connexion";}
-    //on fait une requete SQL pour récuperer l’ensemble des informations des salles en les triant par capacité décroissante.
+    //on fait une requete SQL pour récuperer l’ensemble des informations des salles en les triant par capacité décroissante
 
     $command= "SELECT * FROM salles ORDER BY capacite DESC";
     $result = mysqli_query($connexion, $command);
