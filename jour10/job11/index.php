@@ -16,9 +16,9 @@
         echo "tu es connecté!";
     }
     else{echo "Echec de connexion";}
-    //on fait une requete SQL pour récuperer l’ensemble des informations des salles en les triant par capacité décroissante
+    //on fait une requete SQL pour récuperer la capacité moyenne des salles.
 
-    $command= "SELECT * FROM salles ORDER BY capacite ASC";
+    $command= "SELECT AVG(capacite) FROM salles";
     $result = mysqli_query($connexion, $command);
     
 
