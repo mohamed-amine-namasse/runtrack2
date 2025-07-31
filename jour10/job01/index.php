@@ -10,13 +10,14 @@
 
 <body>
     <?php
+    // on établit la connexion avec la base de donnée jour09
     $connexion = mysqli_connect('localhost', 'root');
     mysqli_select_db($connexion, 'jour09'); 
     if($connexion){
         echo "tu es connecté!";
     }
     else{echo "Echec de connexion";}
-
+    //on fait une requete SQL pour recupérer l'ensemble des informations de la table etudiants
     $command= "SELECT * FROM etudiants";
     $result = mysqli_query($connexion, $command);
     
@@ -27,13 +28,13 @@
     <table>
 
         <tr>
-            <?php 
+            <?php        //on recupère le header de notre table etudiant
             $fields = mysqli_fetch_fields($result);
             foreach ($fields as $field) {
             echo"<th>".htmlspecialchars($field->name)."</th>";}
             ?>
         </tr>
-        <?php 
+        <?php    //on recupère le body de notre table etudiant
             while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             foreach ($fields as $field) {
